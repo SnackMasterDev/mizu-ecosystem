@@ -288,7 +288,7 @@ Este proyecto **pretende** publicarse bajo la Licencia MIT; el archivo `LICENSE`
 
 ### 15.2 Canales de Soporte
 - **Issues**: GitHub Issues para reportes de bugs y feature requests
-- **Email**: dev@mizu.com para consultas técnicas
+- **Email**: jcgarcia1565@gmail.com para consultas técnicas
 - **Documentación**: Este repositorio y el wiki asociado
 
 ---
