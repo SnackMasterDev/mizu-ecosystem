@@ -1,20 +1,21 @@
 # Especificación de Requerimientos del Software Mizu
-**Versión:** 1.0  
+**Versión:** 1.1  
 **Autor:** Juan Camilo Garcia Gomez  
-**Fecha:** Marzo 2026
+**Fecha:** Octubre 2026
 
 ---
 
 ## Introducción
 El proyecto **Mizu** es un ecosistema digital para el sector gastronómico compuesto por cinco subproyectos: **Mizu Experience (web)**, **Mizu Go (app móvil)**, **Mizu Order Hub (escritorio)**, **Mizu Stock (escritorio)** y **Mizu Admin (escritorio)**.  
-Este documento contiene la especificación de **requerimientos funcionales** (Casos de Uso CU) y **requerimientos no funcionales** (NFR) para la Versión 1.0. Se mantiene como documento vivo y deberá actualizarse conforme avance el desarrollo.
+Este documento contiene la especificación de **requerimientos funcionales** (Casos de Uso CU) y **requerimientos no funcionales** (NFR) para la Versión 1.1 (publicada inicialmente en Marzo de 2026 como la Versión 1.0). Se mantiene como documento vivo y deberá actualizarse conforme avance el desarrollo.
 
 ---
 
 ## Control de versiones
 | **Versión** | **Fecha** | **Autor** | **Descripción** |
 |---|---:|---|---|
-| 1.0 | 29/03/2026 | Juan Camilo Garcia Gomez | Documento inicial con requisitos funcionales y no funcionales por subproyecto. |
+| v1.0 | 29/03/2026 | Juan Camilo Garcia Gomez | Documento inicial con requisitos funcionales y no funcionales por subproyecto. |
+| v1.1 | 04/10/2026 | Juan Camilo Garcia Gomez | Adición de casos de uso: CU-AD-05 (Generar nómina de empleados), CU-AD-06 (Ver registros de entrada y salida de empleados), CU-AD-07 (Ver gráficas de reportes de ventas y económicos) y CU-OH-05 (Registrar entrada y salida individual de empleados); reencuadre de CU-AD-02 centrado en reportes contables; nuevas filas en el mapeo de HU sugeridas; actualización del encabezado a la versión 1.1. |
 
 ---
 
@@ -57,6 +58,7 @@ Este documento contiene la especificación de **requerimientos funcionales** (Ca
 - **CU-OH-02** Registro manual de pedidos en el establecimiento  
 - **CU-OH-03** Gestión de estado de pedidos (pendiente, preparación, entregado)  
 - **CU-OH-04** Generación de reportes diarios de pedidos  
+- **CU-OH-05** Registrar entrada y salida individual de empleados (captura por empleado individual en el establecimiento, operada por el personal de la sucursal; alimenta la consulta de Admin CU-AD-06 y la nómina CU-AD-05)  
 
 **Requisitos no funcionales NFR**
 - **NFR-OH-01** Interfaz sencilla e intuitiva para empleados  
@@ -84,9 +86,12 @@ Este documento contiene la especificación de **requerimientos funcionales** (Ca
 
 **Casos de uso funcionales CU**
 - **CU-AD-01** Registrar ingresos y egresos  
-- **CU-AD-02** Generar reportes contables y gráficos  
+- **CU-AD-02** Generar reportes contables (estados financieros y KPIs contables)  
 - **CU-AD-03** Control y gestión de usuarios administradores  
 - **CU-AD-04** Exportación de datos a Excel/PDF  
+- **CU-AD-05** Generar nómina de empleados (calcula período, horas, devengados y deducciones; registro del pago y neto a pagar)  
+- **CU-AD-06** Ver registros de entrada y salida de empleados (consultas y filtros por empleado, sucursal y período; solo lectura en Admin; los registros los captura Order Hub con CU-OH-05)  
+- **CU-AD-07** Ver gráficas de reportes de ventas y económicos (ventas por período y sucursal, ingresos vs egresos y utilidad; CU-AD-02 queda centrado en contabilidad)  
 
 **Requisitos no funcionales NFR**
 - **NFR-AD-01** Cumplimiento normativo contable  
@@ -104,8 +109,12 @@ Este documento contiene la especificación de **requerimientos funcionales** (Ca
 | CU-GO-01 | HU-GO-01 | Registro de usuario (3 pts) |
 | CU-GO-02 | HU-GO-02 | Pedido desde la app (5 pts) |
 | CU-OH-01 | HU-OH-01 | Ver pedidos en tiempo real (4 pts) |
+| CU-OH-05 | HU-OH-05 | Registrar entrada/salida de empleados (3 pts) |
 | CU-ST-01 | HU-ST-01 | Registrar entrada de inventario (4 pts) |
 | CU-AD-01 | HU-AD-01 | Registrar ingreso financiero (4 pts) |
+| CU-AD-05 | HU-AD-05 | Generar nómina de empleados (5 pts) |
+| CU-AD-06 | HU-AD-06 | Ver registro de entrada/salida de empleados (3 pts) |
+| CU-AD-07 | HU-AD-07 | Ver gráficas de reportes de ventas y económicos (5 pts) |
 
 ## Conclusión
 Este documento consolida los requerimientos funcionales y no funcionales del ecosistema Mizu y proporciona el mapeo necesario para convertir la especificación en trabajo rastreable en GitHub. Mantén este archivo actualizado y registra cada cambio en la sección de Control de versiones.
